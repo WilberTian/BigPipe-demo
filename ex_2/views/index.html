@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="test1">loading......</div>
+<div id="test2">loading......</div>
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="/bigpipe.js"></script>
+<script>
+    var bigpipe=new Bigpipe();
+    bigpipe.ready('pagelet1',function(data){
+        $("#test1").html(data.pageletName + " ready");
+    })
+    bigpipe.ready('pagelet2',function(data){
+        $("#test2").html(data.pageletName + " ready");
+    })
+</script>
+</body>
+</html>
